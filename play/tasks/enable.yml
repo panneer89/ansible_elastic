@@ -1,0 +1,17 @@
+---
+- name: enable services
+  systemd: 
+    name: "{{ elasticsearch.service }}"
+    enabled: yes
+    
+- name: start service
+  systemd:
+    name: "{{ elasticsearch.service }}"
+    state: started
+
+- name: validation
+  uri:
+    url: http://localhost:9200
+    method: GET
+    register: response
+  tags: validation

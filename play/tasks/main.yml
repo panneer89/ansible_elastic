@@ -1,0 +1,7 @@
+---
+# tasks file for play
+- include: swapfile.yml
+- include: install.yml
+- include: configure.yml
+- include: enable.yml
+

@@ -1,0 +1,6 @@
+---
+pkg:
+  java:
+    name: java-1.8.0-openjdk 
+  elasticsearch:
+    name: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-x86_64.rpm"

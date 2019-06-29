@@ -1,0 +1,4 @@
+---
+- name: install package 
+  yum: name="{{ item.value.name }}" state=present
+  with_dict: "{{ pkg }}"

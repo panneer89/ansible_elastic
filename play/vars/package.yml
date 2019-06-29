@@ -1,0 +1,10 @@
+---
+pkg:
+  java:
+    name:java-1.8.0-openjdk-devel
+    url:"http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.rpm"
+    path:"/usr/java"
+  elasticsearch:
+    name:elasticsearch
+    url:"https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+    path:"/usr/elasticsearch"

@@ -1,0 +1,7 @@
+---
+network:
+  path: '/etc/elasticsearch/elasticsearch.yml'
+  regex: '^#network.host'
+  host: 'network.host: localhost'
+  hostreg: '^#http.port: 9200'
+  port: 'http.port: 9200'

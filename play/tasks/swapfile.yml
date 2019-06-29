@@ -1,0 +1,28 @@
+---
+- block:
+  - name: create swapspace
+    command: "dd if=/dev/zero of=/swapfile count=4096 bs=1MiB"
+
+  - name: change file permission
+    file: path='/swapfile' mode=0600
+
+  - name: make swapfile
+    command: "mkswap /swapfile"
+
+  - name: swapon for swapfile
+    command: "swapon /swapfile"
+
+  - name: swapon for swapfile
+    command: "swapon -a"
+
+  - name: add swapfile for start up
+    lineinfile:
+      path: /etc/fstab
+      insertafter: EOF
+      line: '/swapfile   swap    swap    sw  0   0'
+
+  - name: set swappiness
+    sysctl: name="vm.swappiness" value="60"
+
+  tags:
+    - swapfile

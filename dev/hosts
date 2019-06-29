@@ -1,0 +1,2 @@
+[target]
+hosts1 ansible_ssh_host=ec2-3-86-42-254.compute-1.amazonaws.com ansible_ssh_user=centos

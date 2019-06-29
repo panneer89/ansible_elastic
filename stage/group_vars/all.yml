@@ -1,0 +1,4 @@
+---
+#/group_vars/stage.yml
+heap_size_Xmx: "-Xmx2g"
+heap_size_Xms: "-Xms2g"

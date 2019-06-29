@@ -1,0 +1,35 @@
+---
+#play/tasks/config.yml
+- name: Increase heap size of elastic search
+  replace:
+    path: "{{ elasticsearch.path }}"
+    regexp: "{{ elasticsearch.regex_xms }}"
+    replace: "{{ heap_size_Xms }}"
+  tags:
+    - config
+
+- name: Increase heap size of elastic search
+  replace:
+    path: "{{ elasticsearch.path }}"
+    regexp: "{{ elasticsearch.regex_xmx }}"
+    replace: "{{ heap_size_Xmx }}"
+  tags:
+    - config
+
+- name: change elasticsearch.yml
+  lineinfile:
+    path: "{{ network.path }}"
+    regexp: "{{ network.regex }}"
+    line: "{{ network.host }}"
+    state: present
+  tags:
+    - conf
+
+- name: change elasticsearch.yml
+  replace:
+    path: "{{ network.path }}"
+    regexp: "{{ network.hostreg }}"
+    replace: "{{ network.port }}"
+  tags:
+    - conf
+

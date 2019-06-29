@@ -1,0 +1,4 @@
+---
+#/group_vars/dev.yml
+heap_size_Xms: "-Xms1g"
+heap_size_Xmx: "-Xmx1g"

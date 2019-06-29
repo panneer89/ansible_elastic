@@ -1,0 +1,6 @@
+---
+elasticsearch:
+  service: elasticsearch.service
+  path: /etc/elasticsearch/jvm.options
+  regex_xms: '^-Xms1g'
+  regex_xmx: '^-Xmx1g'

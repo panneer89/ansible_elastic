@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  vars_files:
+    - play/vars/elastic_Search.yml
+    - play/vars/network.yml
+  remote_user: root
+  roles:
+    - play

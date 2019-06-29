@@ -1,0 +1,2 @@
+[stage]
+hosts2 ansible_ssh_host=ec2-100-24-20-81.compute-1.amazonaws.com ansible_ssh_user=centos
